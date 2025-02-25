@@ -21,9 +21,8 @@ import java.util.Scanner;
  */
 
 public class Ejercicio2Funciones {
+    static int numero1 = pedirNumeros(), numero2 = pedirNumeros();
     public static void main(String[] args) {
-        int numero1 = pedirNumeros();
-        int numero2 = pedirNumeros();
         calculaMayorMenor(numero1, numero2);
         mostrarNumeros(numero1, numero2);
 
@@ -32,6 +31,8 @@ public class Ejercicio2Funciones {
     static void calculaMayorMenor(int a, int b) {
         int mayor = Math.max(a, b);
         int menor = Math.min(a, b);
+        numero1 = mayor;
+        numero2 = menor;
         System.out.println("El mayor es: " + mayor + "\nEl menor es: " + menor);
     }
 
